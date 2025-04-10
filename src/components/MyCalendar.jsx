@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
@@ -7,7 +7,10 @@ import '../style/MyCalendar.css';
 
 Modal.setAppElement('#root');
 
-const MyCalendar = () => {
+const MyCalendar = ({ month }) => {
+
+    const calendarRef = useRef(null);
+
     const [list, setList] = useState([
         { id: '1', title: '병민이형', start: '2025-04-10', end: '2025-04-10' },
         { id: '2', title: '안녕하세요', start: '2025-04-12', end: '2025-04-12' }
@@ -22,8 +25,18 @@ const MyCalendar = () => {
         end: ''
     });
 
+    useEffect(() => {
+        const calendarApi = calendarRef.current?.getApi();
+        if (calendarApi) {
+            const newDate = new Date();
+            newDate.setMonth(month - 1);
+            calendarApi.gotoDate(newDate);
+        }
+    }, [month]);
+
+
     console.log(input)
-    
+
 
     const onDateClick = (info) => {
         setSelectedEvent(null);
@@ -118,6 +131,7 @@ const MyCalendar = () => {
         <div>
             <h2>MakePlanD</h2>
             <FullCalendar
+                ref={calendarRef}
                 plugins={[dayGridPlugin, interactionPlugin]}
                 initialView="dayGridMonth"
                 dateClick={onDateClick}
@@ -146,7 +160,7 @@ const MyCalendar = () => {
                         wrapper.textContent = arg.event.title;
                         return { domNodes: [wrapper] };
                     }
-                    return { html: `<div>${arg.event.title}</div>` };
+                    return { html: <div>${arg.event.title}</div> };
                 }}
             />
 

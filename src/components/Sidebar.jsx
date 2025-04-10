@@ -33,7 +33,7 @@ const Sidebar = () => {
           <div className="menu-item">
             <BiBarChartAlt2 size={21} />
             <span>공부통계</span>
-          </div> 
+          </div>
           <div className="menu-item">
             <FaPen size={21} />
             <span>복습퀴즈</span>

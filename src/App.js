@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios'
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Join from './components/Join';
 import MyCalendar from './components/MyCalendar';
 import Sidebar from './components/Sidebar';
+import Menu from './components/Menu';
 
 function App() {
   // const [id, setId] = useState();
@@ -44,16 +44,22 @@ function App() {
   //       console.log(res)
   //     })
   // }
+  const today = new Date();
+  const [month, setMonth] = useState(today.getMonth() + 1);
+  console.log(month)
+
+
   return (
 
-    <div style={{display: 'flex'}}>
+    <div style={{ display: 'flex', marginLeft: '60px' }}>
       <Sidebar></Sidebar>
+      <Menu month={month} setMonth={setMonth}></Menu>
 
-      <div style={{flex:1}}>
+      <div style={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/join" element={<Join />} />
-          <Route path="/calendar" element={<MyCalendar />} />
+          <Route path="/calendar" element={<MyCalendar month={month} />} />
         </Routes>
 
 

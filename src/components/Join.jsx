@@ -12,10 +12,10 @@ const Join = () => {
         birthYear: '',
         birthMonth: '',
         birthDay: ''
-        
+
     });
     console.log('form', form)
-    
+
     const onChange = (e) => {
         const { name, value } = e.target;
         setForm({ ...form, [name]: value });
