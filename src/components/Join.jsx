@@ -25,7 +25,7 @@ const Join = () => {
     const handleSubmit = () => {
         console.log('회원가입 정보:', form);
 
-        alert('회원가입에 성공했습니다!d');
+        alert('회원가입에 성공했습니다!dddddd');
         navigate('/');
     };
 
