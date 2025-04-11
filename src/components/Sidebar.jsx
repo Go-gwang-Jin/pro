@@ -22,14 +22,14 @@ const Sidebar = () => {
             <FaCalendar size={21} />
             <span>일정달력</span>
           </Link>
-          <div className="menu-item">
+          <Link to="/study" className="menu-item">
             <BsBook size={21} />
             <span>공부달력</span>
-          </div>
-          <div className="menu-item">
+          </Link>
+          <Link to="/mypage" className="menu-item">
             <BsPerson size={21} />
             <span>마이페이지</span>
-          </div>
+          </Link>
           <div className="menu-item">
             <BiBarChartAlt2 size={21} />
             <span>공부통계</span>

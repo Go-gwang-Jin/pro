@@ -7,6 +7,9 @@ import Join from './components/Join';
 import MyCalendar from './components/MyCalendar';
 import Sidebar from './components/Sidebar';
 import Menu from './components/Menu';
+import StudyCalendar from './components/StudyCalendar';
+import StudyDetail from './components/StudyDetail';
+import MyPage from './components/MyPage';
 
 function App() {
   // const [id, setId] = useState();
@@ -60,6 +63,9 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/join" element={<Join />} />
           <Route path="/calendar" element={<MyCalendar month={month} />} />
+          <Route path="/study" element={<StudyCalendar month={month} />} />
+          <Route path="/study/:date" element={<StudyDetail />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
 
 

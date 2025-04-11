@@ -1,5 +1,5 @@
 .join-container {
-    max-width: 500px;
+    max-width: 550px;
     margin: 50px auto;
     padding: 30px;
     border: 1px solid #ccc;
@@ -28,6 +28,13 @@
 .input-group {
     display: flex;
     gap: 10px;
+}
+
+.input-label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 14px;
 }
 
 .check-btn {
@@ -74,4 +81,38 @@
 .join-btn.cancel {
     background-color: #fff176;
     color: black;
+}
+
+/* 아이디 입력창에 중복확인 버튼 넣기 */
+.input-id-wrap {
+    position: relative;
+    width: 95%;
+    margin-bottom: 16px;
+}
+
+.input-id-wrap input {
+    width: 105%;
+    padding: 12px;
+    padding-right: 95px;
+    /* 버튼 공간  */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+.input-id-wrap .check-btn {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 14px;
+    background-color: skyblue;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
 }

@@ -5,33 +5,32 @@
     color: white;
     display: flex;
     flex-direction: column;
-  }
-  
-  .menu-top {
+}
+
+.menu-top {
     height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #161515;
-  }
-  
-  .menu-month {
+}
+
+.menu-month {
     font-size: 28px;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  
-  .month-text {
+}
+
+.month-text {
     min-width: 40px;
     text-align: center;
-  }
-  
-  .menu-welcome {
+}
+
+.menu-welcome {
     font-size: 12px;
     margin-top: 20px;
     text-align: center;
-  }
-  
+}

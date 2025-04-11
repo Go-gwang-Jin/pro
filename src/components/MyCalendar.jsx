@@ -128,12 +128,13 @@ const MyCalendar = ({ month }) => {
     };
 
     return (
-        <div>
+        <div className='calendar-wrap'>
             <h2>MakePlanD</h2>
             <FullCalendar
                 ref={calendarRef}
                 plugins={[dayGridPlugin, interactionPlugin]}
                 initialView="dayGridMonth"
+                height="800px"
                 dateClick={onDateClick}
                 eventClick={onEventClick}
                 selectable={true}
