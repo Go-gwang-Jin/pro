@@ -19,7 +19,7 @@ const StudyDetail = () => {
         // 이미지 파일일 경우
         if (file.type.startsWith('image/')) {
             reader.onload = (event) => {
-                setImageSrc(event.target.result); // base64 이미지로 세팅
+                setImageSrc(event.target.result);
                 setFileContent(''); // 텍스트는 비움
             };
             reader.readAsDataURL(file);

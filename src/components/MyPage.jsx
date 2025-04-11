@@ -34,7 +34,7 @@ const MyPage = () => {
             </div>
 
             <div className="info-section">
-                <button className="info-btn">아이디</button>
+                <button className="info-btn">아이디 변경</button>
                 <button className="info-btn">비밀번호 변경</button>
                 <button className="info-btn">닉네임 변경</button>
                 <button className="info-btn">친구에게 추천하기</button>
